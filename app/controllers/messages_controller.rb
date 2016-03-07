@@ -33,10 +33,13 @@ class MessagesController < ApplicationController
     redirect_to root_path ,notice: 'メッセージを削除しました'
   end
 
+  def age
+  end
+
   private
 
   def message_params
-    params.require(:message).permit(:name, :body)
+    params.require(:message).permit(:name, :body, :age)
   end
 
   def set_message
